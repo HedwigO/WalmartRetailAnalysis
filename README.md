@@ -47,6 +47,7 @@ Due to the size limit, I cannot upload those datasets here. Please download the 
 
 # Data Flow Diagram
 ![Data Flow of Project](https://github.com/HedwigO/WalmartRetailAnalysis/assets/97476561/7fa12736-e356-46b8-8add-6834d86a1835)
+A more detailed data ingestion, data preprocessing, model training, and model evaluation explanation is inlcuded below:
 
 # Data Preprocess
 The data preprocessing stage is crucial for ensuring that the datasets are clean, consistent, and ready for analysis. Here are the detailed steps involved:
@@ -84,3 +85,10 @@ Performance Metrics: Evaluating the model's performance using RMSE (Root Mean Sq
 SHAP Values: Applying SHAP (SHapley Additive exPlanations) to interpret the model’s predictions and visualize the impact of each feature on the prediction.
 
 ![Feature Importance of Model](https://github.com/HedwigO/WalmartRetailAnalysis/assets/97476561/2c3b9de7-dfc4-4fa8-a1a9-89a8e78311bb)
+
+Above is the SHAP diagram. Observe that:
+
+- **Sales & Unit Price** have the highest positive impact on profits, meaning that higher sales/unit prices will lead to higher profits.
+- **Product Base Margin & Product Container** have notable correlations with profits, meaning that type of product container might affect shipping costs, thus affects overall profits
+- **Geographical Features (City, Zip Code, and Region)**: have smaller SHAP value, reflecting local market conditions, demographic differences, and economic factors that can influence consumer behavior and, consequently, Walmart’s profitability in different regions.
+- **Discount & Customer Age** can have both positive and negative impacts on profits. For **Discount**, higher discounts will boost sales volume, but it will reduce the profit margin per unit at the same time. For **Customer Age**, customers at different ages may have different spending power and preferences.
