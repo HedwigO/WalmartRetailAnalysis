@@ -42,5 +42,5 @@ Walmart 1215 has the size of 1.22 MB, with 25 columns (1 target profit and 24 fe
 
 Due to the size limit, I cannot upload those datasets here. Please download the datasets from the original sources on Data World. Many thanks to the data source from: 
 
-[Walmart1215](https://data.world/garyhoove470/walmart-retail-dataset) provided by `@Gary Hoover` on Data World
-[Walmart1923](https://data.world/ahmedmnif150/walmart-retail-dataset) provided by `@Mnif Ahmed` on Data World
+- [Walmart1215](https://data.world/garyhoove470/walmart-retail-dataset) provided by `@Gary Hoover` on Data World
+- [Walmart1923](https://data.world/ahmedmnif150/walmart-retail-dataset) provided by `@Mnif Ahmed` on Data World
