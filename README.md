@@ -44,3 +44,43 @@ Due to the size limit, I cannot upload those datasets here. Please download the 
 
 - [Walmart1215](https://data.world/garyhoove470/walmart-retail-dataset) provided by `@Gary Hoover` on Data World
 - [Walmart1923](https://data.world/ahmedmnif150/walmart-retail-dataset) provided by `@Mnif Ahmed` on Data World
+
+# Data Flow Diagram
+![Data Flow of Project](https://github.com/HedwigO/WalmartRetailAnalysis/assets/97476561/7fa12736-e356-46b8-8add-6834d86a1835)
+
+# Data Preprocess
+The data preprocessing stage is crucial for ensuring that the datasets are clean, consistent, and ready for analysis. Here are the detailed steps involved:
+
+1. Data Ingestion and Initial Cleaning
+- Loading the Datasets: Fist, loading the Walmart1215.csv and Walmart1923.csv datasets from the data directory.
+- Standardizing Column Names: Ensuring that column names are consistent across both datasets to facilitate merging and analysis.
+- Handling Missing Values: Removing rows containing placeholder values such as '\N'. This is done to prevent the inclusion of incomplete or corrupt data, which could adversely affect subsequent analyses.
+
+2. Data Profiling
+Identifying Unique Records: Using HDFS MapReduce to identify unique records within the dataset. This helps in understanding the distribution and variance of the data, which is crucial for selecting appropriate modeling techniques and for feature engineering during the machine learning pipeline construction.
+
+3. Combining Datasets
+Merging Datasets: Combining Walmart1215 and Walmart1923 datasets for a comprehensive analysis. Ensuring that the structure of the combined dataset is consistent.
+
+4. Encoding Categorical Variables
+Label Encoding: Converting categorical variables into numerical values using label encoding.
+
+5. Feature Scaling
+Normalizing Data: Applying feature scaling to ensure that the numerical features are on a similar scale.
+
+# Model Training and Evaluation
+The model training stage involves building and evaluating the XGBoost model to predict profits from Walmart's retail data.
+
+1. Splitting the Data
+Train-Test Split: Dividing the dataset into training and testing sets to evaluate model performance.
+
+2. Training the Model
+XGBoost Model: Training the XGBoost model using the training dataset. XGBoost is chosen for its robustness and ability to handle complex interactions within the data.
+
+3. Evaluating the Model
+Performance Metrics: Evaluating the model's performance using RMSE (Root Mean Square Error) to measure prediction accuracy.
+
+4. Feature Importance Analysis
+SHAP Values: Applying SHAP (SHapley Additive exPlanations) to interpret the model’s predictions and visualize the impact of each feature on the prediction.
+
+![Feature Importance of Model](https://github.com/HedwigO/WalmartRetailAnalysis/assets/97476561/2c3b9de7-dfc4-4fa8-a1a9-89a8e78311bb)
